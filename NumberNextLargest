@@ -1,0 +1,22 @@
+public class ZohoProgram {
+    public static void main(String[] args) {
+         int arr[]=new int[]{90, 23, 5, 109, 12, 22, 67, 34};
+         Arrays.sort(arr);
+         /*int len=arr.length;
+         System.out.println(len);
+         for(int i=0;i<1;i++){
+            System.out.println(Arrays.toString(arr));
+         }
+         */
+         int j=0;
+         while(j<arr.length-1){
+             System.out.println(arr[j]+"-->"+arr[j+1]);
+             //if(j==7)
+               //  break;
+               j++;
+         }
+        if(j==arr.length-1){
+              System.out.println(arr[j]+"-->"+arr[j]);
+        }
+    }
+}
