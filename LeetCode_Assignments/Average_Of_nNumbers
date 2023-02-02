@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main{
+    static void average(){
+        Scanner sc=new Scanner(System.in);
+        int j=1,sum=0,count=0;
+        while(j>0){
+            System.out.print("Enter number "+j+" =");
+            int x=sc.nextInt();
+            if(x!=0){
+                count++;
+                sum+=x;
+            }
+            else{
+                break;
+            }
+            j++;
+        }
+        double avg = sum / count;
+        System.out.println("Average of "+count+" numbers is "+ String.format("%.1f", avg));
+}
+    public static void main(String[] args){
+        average();
+    }
+}
