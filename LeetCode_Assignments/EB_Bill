@@ -1,0 +1,19 @@
+public class Main{
+    static double EBillCalculation(double unit){
+        if(unit <=100){
+            return 0;
+        }
+        else if(unit>100 && unit<=200){
+            return (unit-100)*1.5;
+        }
+        else if(unit >200 && unit <=500){
+             return ((100*2)+((unit-200)*3));
+        }
+        return ((100*2)+((300)*3)+(unit-500)*5);
+    }
+    public static void main(String[] args){
+        System.out.println("No. of Units consumed :");
+        double unit=sc.nextDouble();
+        System.out.println(String.format("%.2f",EBillCalculation(unit)));
+    }
+}    
