@@ -1,0 +1,46 @@
+/*
+Keep taking numbers as inputs till the user enters ‘x’, after that print sum of all.
+*/
+package assignments;
+import java.util.Scanner;
+public class Assignment2 {
+    public static void main(String[] args){
+        Scanner sc= new Scanner(System.in); 
+        int sum=0;
+        int i=1;
+        int num;
+        System.out.println("1. Entering 0 to quit \n2. Entering a lettr to quit");
+        int x= sc.nextInt();
+        switch(x){
+            case 1:{
+                while(i>0){
+                    System.out.print("Enter a number "+i+"= ");
+                    num=sc.nextInt();
+                    sum+=num;
+                    if(num == 0){
+                        break;        
+                    }
+                    i++;
+                }
+                System.out.println("Total ="+sum);
+                break;
+            }
+            case 2:{
+                int j=1;
+                System.out.println("Enter num "+j+"=");
+                while(sc.hasNextInt()){       
+                    num =sc.nextInt();
+                    sum+=num;
+                    j++;
+                    System.out.print("Enter num "+ j+" : ");
+                }
+                System.out.println("Total = "+sum);
+                break;
+            }
+            default:{
+                System.out.println("INVALID OPTION!!!");
+                break;
+            }
+        }
+    }
+}
