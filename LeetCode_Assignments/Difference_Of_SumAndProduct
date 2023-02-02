@@ -1,0 +1,38 @@
+/*
+Given an integer number n, return the difference between the product of its digits and the sum of its digits
+*/
+import java.util.Scanner;
+public class Assignment3 { 
+    static void factorsOfnum(int n){
+        int c=1;
+        System.out.print("Factors of " +n+" are " );
+        while(c<=n){
+            if(n%c==0){
+                System.out.print(c+" ");
+            }
+            c++;
+        }
+        System.out.println();
+    }
+    static int subtractProductAndSum(int n){
+        int temp=n;
+        int sum=0;
+        int product =1;
+        while(n>0){
+            int a =n% 10;
+            sum +=a;
+            product *= a;
+            n=n/10;
+        }    
+        return (product - sum);
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+//        System.out.print("Enter a number :");
+//        int x= sc.nextInt();
+//        System.out.println(subtractProductAndSum(x));
+        System.out.print("Enter a number :");
+        int num= sc.nextInt();
+        factorsOfnum(num);
+    } 
+}
