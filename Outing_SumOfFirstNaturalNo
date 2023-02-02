@@ -1,0 +1,31 @@
+/*
+1. Write a function that returns the sum of first n natural numbers.
+2. Kunal is allowed to go out with his friends only on the even days of a given month.
+  Write a program to count the number of days he can go out in the month of August.
+*/
+import java.uti.Scanner;
+public class Main{
+     static int SumofFirst_n_NaturalNumbers(int n){
+        int sum=0;        
+        for(int i=1;i<=n;i++){
+            sum+=i;
+        }
+        //int sum = (n*(n+1)) / 2 ;
+    return sum;    
+    }
+    static int Outing(){
+        int count =0;
+        for(int i = 1; i<=31;i++){
+            if(i % 2 ==0){
+                count ++;  
+            }
+        }
+    return count;
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number :");
+        int num=sc.nextInt();
+        System.out.println(SumofFirst_n_NaturalNumbers(num));
+        System.out.println(Outing());        
+}
