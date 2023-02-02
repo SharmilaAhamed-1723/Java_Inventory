@@ -12,6 +12,7 @@ public class Main{
         return ((100*2)+((300)*3)+(unit-500)*5);
     }
     public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
         System.out.println("No. of Units consumed :");
         double unit=sc.nextDouble();
         System.out.println(String.format("%.2f",EBillCalculation(unit)));
