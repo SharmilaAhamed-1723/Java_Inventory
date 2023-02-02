@@ -1,0 +1,204 @@
+/*
+Area Of Circle Java Program
+Area Of Triangle
+Area Of Rectangle Program
+Area Of Isosceles Triangle
+Area Of Parallelogram
+Area Of Rhombus
+Area Of Equilateral Triangle
+
+Perimeter Of Circle
+Perimeter Of Equilateral Triangle
+Perimeter Of Parallelogram
+Perimeter Of Rectangle
+Perimeter Of Square
+Perimeter Of Rhombus
+
+Volume Of Cone Java Program
+Volume Of Prism
+Volume Of Cylinder
+Volume Of Sphere
+Volume Of Pyramid
+*/
+package assignments;
+import java.util.Scanner;
+public class Assignment4 {
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print(" 1.Circle \n 2.Triangle \n 3.Rectangle \n 4.Paralellogram \n 5.Rhombus \n Enter a shape : ");
+        String shape= sc.next();
+        System.out.print("Enter one of the following: \n 1.Area \n 2.Perimeter \n 3.Volume ");
+        String text=sc.next();
+         final double PHI =3.14;
+        switch(text){
+            case "Area":{
+                float Area;
+                switch(shape){
+                    case "Circle":{
+                        System.out.print("Enter radius :");
+                        float r=sc.nextFloat();
+                        Area = (float)PHI * r * r;
+                        System.out.println(Area);
+                        break;
+                    }
+                    case "Triangle":{
+                        System.out.print("Enter Base :");
+                        float b=sc.nextFloat();
+                        System.out.print("Enter Height :");
+                        float h=sc.nextFloat();
+                        Area =  b * h / 2;
+                        System.out.println(Area);
+                        break;
+                    }
+                    case "Rectangle":{
+                        System.out.print("Enter Length :");
+                        float length =sc.nextFloat();
+                        System.out.print("Enter Width :");
+                        float width =sc.nextFloat();
+                        Area =  length * width / 2;
+                        System.out.println(Area);
+                        break;
+                    }
+                    case "Paralellogram":{
+                        System.out.print("Enter Base :");
+                        float base=sc.nextFloat();
+                        System.out.print("Enter Height :");
+                        float height =sc.nextFloat();
+                        Area =  base * height ;
+                        System.out.println(Area);
+                        break;
+                    }
+                    //case "Isosceles Triangle": Same as Triangle
+                    case "Rhombus":{
+                        System.out.print("Enter diagonal 1 :");
+                       float d1 = sc.nextFloat();
+                       System.out.print("Enter diagonal 2 :");
+                       float d2 = sc.nextFloat();
+                       Area = d1 * d2 ;
+                       System.out.print(Area);
+                       break;
+                    }
+                    default:{
+                        System.out.println(" INVALID SHAPE!!!");
+                        break;
+                    }    
+                }
+            break;
+            }
+            case "Perimeter":{
+                float perimeter;
+                switch(shape){
+                    case "Circle":{
+                        System.out.print("Enter radius :");
+                        float r=sc.nextFloat();
+                        perimeter = (float) (2 * PHI * r);
+                        System.out.println(perimeter);
+                        break;
+                    }
+                    case "Triangle":{
+                        System.out.print("Enter 1st Side :");
+                        float a=sc.nextFloat();
+                        System.out.print("Enter 2nd Side :");
+                        float b=sc.nextFloat();
+                        System.out.print("Enter 3rd side :");
+                        float c=sc.nextFloat();
+                        perimeter =  a+b+c;
+                        System.out.println(perimeter);
+                        break;
+                    }
+                    case "Rectangle":{
+                        System.out.print("Enter Length :");
+                        float length =sc.nextFloat();
+                        System.out.print("Enter Width :");
+                        float width =sc.nextFloat();
+                        perimeter =  2*( length + width );
+                        System.out.println(perimeter);
+                        break;
+                    }
+                    case "Paralellogram":{
+                        System.out.print("Enter Length :");
+                        float length =sc.nextFloat();
+                        System.out.print("Enter Width :");
+                        float width =sc.nextFloat();
+                        perimeter =  2*( length + width );
+                        System.out.println(perimeter);
+                        break;
+                    }
+                    //case "Isosceles Triangle": Same as Triangle
+                    case "Rhombus":{
+                       System.out.print("Enter side of rhombus :");
+                       float a = sc.nextFloat();
+                       perimeter = 4 * a ;
+                       System.out.print(perimeter);
+                       break;
+                    }
+                    default:{
+                        System.out.println(" INVALID SHAPE!!!");
+                        break;
+                    }    
+                }
+            break;
+            }
+            case "Volume":{
+                System.out.println("2D shapes don't have Volume");
+                System.err.println("Enter a 3D shape: \n 1.Cone \n 2.Square Prism \n 3.Cylinder \n 4.Sphere \n 5.Pyramid ");
+                String shapes = sc.next();
+                float volume;
+                switch(shapes){
+                    case "Cone":{
+                        System.out.print("Enter radius :");
+                        int r=sc.nextInt();
+                        System.out.print("Enter height :");
+                        int h=sc.nextInt();
+                        volume= (float)(PHI * r * r * h) / 3;
+                        System.out.println(volume);
+                    break;
+                    } 
+                    case "Square Prism":{
+                        System.out.print("Enter Side :");
+                        int a=sc.nextInt();
+                        volume =(float)( Math.pow(a, 3));
+                        System.out.println(volume);
+                    break;
+                    } 
+                    case "Cylinder":{
+                        System.out.print("Enter radius :");
+                        int r=sc.nextInt();
+                        System.out.print("Enter height :");
+                        int h=sc.nextInt();
+                        volume= (float)(PHI * r * r * h);
+                        System.out.println(volume);
+                    break;
+                    } 
+                    case "Sphere":{
+                        System.out.print("Enter radius :");
+                        int r=sc.nextInt();
+                        volume=(float)(4*PHI*Math.pow(r, 3))/3;
+                        System.out.println(volume);
+                    break;
+                    } 
+                    case "Pyramid":{
+                        System.out.print("Enter Length :");
+                        float len =sc.nextFloat();
+                        System.out.print("Enter Width :");
+                        float wid =sc.nextFloat();
+                        System.out.print("Enter Height :");
+                        float hgt =sc.nextFloat();
+                        volume = (len * wid * hgt) / 3;
+                        System.out.println(volume);
+                    break;
+                    } 
+                    default:{
+                        System.out.println("INVALID SHAPE!!!");
+                        break;
+                    }
+                }
+            break;
+            }
+            default:{
+                System.out.println("Enter valid option!!!");
+                break;
+            }
+        }
+    }
+}
