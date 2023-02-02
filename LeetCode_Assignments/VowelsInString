@@ -1,0 +1,28 @@
+public class VowelsInString {
+    static int No_Of_Vowels(String str) {
+        int count = 0;
+        int x = str.length();
+        for(int i=0; i < x; i++){
+            char ch = str.charAt(i);
+
+            if(ch == 'a' || ch== 'e' || ch == 'i' || ch== 'o' || ch== 'u' ){
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args){
+        String str = "Hello Java";
+        int count = 0;
+        int n= str.length();
+        for (int i = 0; i < n; i++) {
+             char ch= str.charAt(i);
+             if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                 count ++ ;
+             }
+        }
+        System.out.println(count);
+        System.out.println(No_Of_Vowels(str));
+    }
+} 
