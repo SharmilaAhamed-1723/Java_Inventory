@@ -1,0 +1,21 @@
+public class Main{
+    static boolean PythagorasTriplet(int[] arr){
+        for(int i=0; i<arr.length; i++){
+            for(int j=i+1;j<arr.length; j++){
+                for(int k=j+1;k< arr.length; k++){
+                    int x= arr[i]*arr[i];
+                    int y= arr[j]*arr[j];
+                    int z= arr[k]*arr[k];
+                    if(x+y == z || z+x ==y || y+z==x){
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args){
+        int[] arr={3,4,5 ,1,2};
+        System.out.println(PythagorasTriplet(arr));
+    }
+}
