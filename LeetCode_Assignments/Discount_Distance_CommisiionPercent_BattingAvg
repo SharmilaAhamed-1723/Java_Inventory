@@ -1,0 +1,104 @@
+/*
+Calculate Discount Of Product
+Calculate Distance Between Two Points
+Calculate Commission Percentage
+Calculate Batting Average
+   Batting Average = Runs Scored/Number of dismissals     
+   where 
+   Number of dismissals = Number of innings - Number of innings he remained Not Out     
+ */
+package assignments;
+import java.util.Scanner;
+public class Assignment6 {
+    static double distance(int x1, int y1, int x2, int y2){
+        double x=Math.pow((x2-x1),2);
+        double y=Math.pow((y2-y1),2);
+        double distance=Math.sqrt((x+y));
+        return distance;
+    }
+     static int averageRuns(int runs, int matches,int notout)
+    {
+ 
+        // Calculate number of dismissals
+        int out = matches - notout;
+ 
+        // Check for 0 times out
+        if (out == 0)
+            return -1;
+ 
+        // Calculate batting average
+        int avg = (runs) / out;
+ 
+        return avg;
+    }
+ 
+    static float discount(float originalPrice, float discountPrice){
+        float discountPercent= (originalPrice - discountPrice) / originalPrice * 100;
+        return discountPercent;
+    }
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1.Discount of Product \n2.Distance between two points \n3.Comission percentage \n4.Depreciation of value \n5.Battong Average");
+        int option = sc.nextInt();
+        switch(option){
+            case 1:{
+                System.out.println("Discount of Product");
+                System.out.println("Enter original price: ");
+                float origPrice= sc.nextFloat() ;
+                System.out.println("Enter discount price: ");
+                float disPrice= sc.nextFloat() ;
+                double discount = (int)discount(origPrice, disPrice);
+                System.out.println("Discount Percentage is "+discount+"%");
+                break;
+            }
+            case 2:{
+                System.out.println("Distance between two points");
+                double distance=distance(5,1,8,1);
+                System.out.println(distance);
+                break;
+            }
+            case 3:{
+                System.out.println("Comission percentage");
+                System.out.println("Enter Amount: ");
+                int amt=sc.nextInt();
+                System.out.println("Enter Comission: ");
+                int comsn=sc.nextInt();
+                int comsnPercent= comsn *100 / amt;
+                System.out.println("Comission percentage is "+comsnPercent);
+                break;
+            }
+            case 4:{
+                /*
+                The value of an asset decreases over time
+                Formula Final Value = Present Value (1+rate/100)^n
+                */
+                System.out.println("Depreciation of IPhone 14 pro");
+                System.out.print("Enter Present value :");
+                double preVal = sc.nextInt();
+                System.out.println("Enter the rate of depreciation :");
+                double rate = sc.nextInt();
+                System.out.println("Enter the year :");
+                double year = sc.nextInt();
+                double dep = preVal * Math.pow((1 + rate / 100),year);
+                System.out.println(String.format("%.4f",dep));
+                break;
+            }
+            case 5:{
+                System.out.print("Runs :");
+                int runs = sc.nextInt();
+                System.out.print("Matches :");
+                int matches = sc.nextInt();
+                System.out.print("Not out :");
+                int notout = sc.nextInt();
+                System.out.println(averageRuns(runs,  matches, notout));
+                break;
+            }
+            default:{
+                System.out.println("INVALID OPTION!!!");
+                break;
+            }
+            
+        }
+        
+    }
+}
