@@ -1,0 +1,24 @@
+
+/*
+Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+Return the array in the form [x1,y1,x2,y2,...,xn,yn].
+*/
+
+public class Main{
+    static void Shuffle_Array(int[] arr ){
+        int n= arr.length /2;
+        int[] result= new int[arr.length];
+        for(int i=0;i<arr.length;i++){
+            if(i == 0 || i== arr.length-1){
+               result[i]=arr[i];
+               }
+            int j= (i%2==0)? i/2 : n+(i/2);
+            result[i]=arr[j];
+        }
+        System.out.println(Arrays.toString(result));
+    }
+    public static void main(String[] args){
+        int[] arr={1,2,3,4,4,3,2,1};
+        Shuffle_Array(arr);
+    }
+}
