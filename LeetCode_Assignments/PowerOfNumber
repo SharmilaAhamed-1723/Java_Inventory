@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Sample{
+    static void power(){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a number :");
+        int num=sc.nextInt();
+        System.out.print("Enter power value :");
+        int pow= sc.nextInt();
+        int c=1;
+        int product=1;
+        while(c<=pow){
+            product*=num;
+            c++;
+        }
+        System.out.println(product);
+    }
+    public static void main(String[] args){
+        power();       
+    }
+}    
