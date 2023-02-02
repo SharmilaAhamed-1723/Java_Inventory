@@ -10,6 +10,7 @@ public class SortingDemo {
           int[] arr=new int[]{12, 45, 1, -1, 0, 4, 56, 23, 89, -21, 56, 27};
           int[] arr1=new int[]{12, 45, 1, -1, 0, 4, 56, 23, 89, -21, 56, 27};
           Integer[] arr2={12, 45, 1, -1, 0, 4, 56, 23, 89, -21, 56, 27};
+          // Sort function  
           Arrays.sort(arr);
           System.out.println(Arrays.toString(arr));
           System.out.println("***SORTING USING FOR LOOP***");
