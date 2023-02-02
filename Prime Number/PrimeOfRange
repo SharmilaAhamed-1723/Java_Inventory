@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Main{
+    static void PrimeRange(int n1, int n2){
+        int c;
+        for(int i=n1; i<=n2; i++){
+            if(i==0 || i==1){
+                continue;
+            }
+            for(c=2; c*c<=i; c++){
+                if(i%c == 0){
+                     break; 
+                }
+            }
+            if(c*c > i){
+                System.out.println(i);
+            }
+        }    
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the numbers (Prime number between range) :");
+        int n1=sc.nextInt();
+        int n2=sc.nextInt();
+        PrimeRange(n1,n2);
+    }
+}
