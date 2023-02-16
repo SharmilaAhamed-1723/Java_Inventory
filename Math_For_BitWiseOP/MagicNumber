@@ -3,9 +3,9 @@ public class MagicNO {
         int base = 5;
         int ans = 0;
         while(n>0){
-            int last = n & 1;
-            n = n>>1;
-            ans += base * last;
+            int last = n & 1; //Gives the last digit
+            n = n>>1; //right shift of 1 gives digits other than last 
+            ans += base * last; // Power of 5
             base *= 5;
         }
         return ans;
