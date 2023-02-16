@@ -1,3 +1,6 @@
+/*
+Complexity = log(N)
+*/
 public class MagicNO {
     static int MagicNumber(int n){
         int base = 5;
