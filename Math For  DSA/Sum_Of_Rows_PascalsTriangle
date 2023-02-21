@@ -1,0 +1,9 @@
+public class Main{
+    static int Sum_Of_Rows_pascalsTriangle(int row){
+        // Sum of rows = 2^row = 1<< row-1
+        return 1<< row-1;
+    }
+    public static void main(String[] args){
+         Sum_Of_Rows_pascalsTriangle(4);
+    }
+}
