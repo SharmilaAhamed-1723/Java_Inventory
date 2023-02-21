@@ -1,0 +1,17 @@
+public class Main{   
+    static int no_Of_setBits(int n){
+        int count = 0;
+        while (n>0){
+            /*
+            n & (-n) => gives the right mos set bit
+            n - (n &(-n)) neglect the right most set bit
+            */
+           n = n -(n&(-n));
+           count++;
+        }
+        return count;
+    }
+    public static void main(String[] args){
+        System.out.println(no_Of_setBits(15));
+   }
+}
