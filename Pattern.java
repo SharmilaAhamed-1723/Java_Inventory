@@ -298,7 +298,27 @@ public class KKPattern {
       1   3   3   1
     1   4   6   4   1
      */
-
+    static void PascalSTriangle(int n){
+        for(int i=0;i<n; i++){
+           for (int s = 0; s < n - 1 - i; s++) {
+                System.out.print(" ");
+            }
+            for(int j=0;j<=i ;j++){
+              System.out.print(nCr(i,j)+" ");  
+            }
+            System.out.println();
+        }
+    }
+    static int nCr(int n, int r) {
+        if(n < r || n==0)
+            return 1;
+        int num=1, den=1;
+        for(int i = r ; r>=1; i--){
+             num *= n--;
+             den *= r--;
+        }
+        return num / den;
+    }
     static void pattern16(int n) {
         for (int i = 0; i < n; i++) {
             for (int space = i; space < n - 1; space++) {
@@ -465,6 +485,7 @@ public class KKPattern {
         System.out.println("PATTERN 20");
         pattern20(4);
         System.out.println();
+        PascalSTriangle(6);
     }
 
 }
