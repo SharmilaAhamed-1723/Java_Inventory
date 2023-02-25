@@ -1,0 +1,19 @@
+public class Main{
+  public static void main(String[] args) {
+       System.out.printf("%.3f", Newtonsqrt(100));
+       // System.out.println( Newtonsqrt(40));
+  }
+    // Time: O(log(n)F(n))
+     static double Newtonsqrt(double n) {
+        double x = n;
+        double root;
+        while(true){
+            root = 0.5*(x + (n/x));
+            if(Math.abs(root - x) < 0.5){
+                break;
+            }
+            x=root;
+        }
+        return root;
+    }
+}
