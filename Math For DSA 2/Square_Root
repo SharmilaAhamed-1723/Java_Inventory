@@ -1,9 +1,9 @@
 public class Main{
   public static void main(String[] args) {
-      System.out.printf("%.3f", sqrt(40, 3));
+      System.out.printf("%.3f", BinarySearchsqrt(40, 3));
     }
     // Time: O(log(n))
-    static double sqrt(int num, int precision) {
+    static double BinarySearchsqrt(int num, int precision) {
         int s = 0;
         int e = num;
         double root = 0.0;
