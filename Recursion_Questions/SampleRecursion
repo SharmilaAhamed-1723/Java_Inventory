@@ -1,0 +1,34 @@
+publi class Main{
+    static void print(int n){
+        if(n==5){
+           System.out.println(n);
+           return;
+        }
+        System.out.println(n);
+        print(n+1);
+    }
+    static void printS(int n){
+        if(n>0){
+        System.out.println(n);
+        print(n-1);
+        }
+    }
+    static void SampleRecfun(int n){
+        if(n==0)
+            return;
+        System.out.println(n);
+        fun(n-1);
+    }
+    static void SampleRecfunRev(int n){
+        if(n==0)
+            return;
+        funRev(n-1);
+        System.out.println(n);
+    }
+    public static void main(String[] args){        
+        SampleRecfun(5);
+        SampleRecfunRev(5);
+        print(1);
+        printS(5);
+    }
+}
