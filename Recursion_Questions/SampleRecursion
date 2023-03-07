@@ -1,4 +1,16 @@
 publi class Main{
+     /*
+    Infinite recursion
+    Since the post increment operator will pass the vale of n and then subtract
+    In this case, the value 5 is passed over and over again recursively
+    */
+    static void  recurFun(int n){
+        if(n==0)
+            return;
+        System.out.println(n);
+        //recurFun(n--);
+        recurFun(--n);
+    }   
     static void print(int n){
         if(n==5){
            System.out.println(n);
@@ -25,7 +37,8 @@ publi class Main{
         funRev(n-1);
         System.out.println(n);
     }
-    public static void main(String[] args){        
+    public static void main(String[] args){ 
+        recurFun(5);
         SampleRecfun(5);
         SampleRecfunRev(5);
         print(1);
