@@ -17,15 +17,8 @@ class PalindromNumber {
            System.out.println("The number "+temp+ " is not a palindrom");
         }
     }
-
-}
-public class PalindromDemo{
     public static void main(String[] args) {
-       PalindromNumber pn=new PalindromNumber();
-       Scanner sc=new Scanner(System.in);
-       System.out.print("Enter any number: ");
-       int n=sc.nextInt();
-       pn.palindrom(n);
+         palindrom(1723);    
     }
     
 }
