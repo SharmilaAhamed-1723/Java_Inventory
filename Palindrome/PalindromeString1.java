@@ -1,4 +1,6 @@
-package palindromdemo;
+/*
+For Strings and Array, Not for an integer
+*/
 public class PalindromeString1 {
     static boolean isPalindrome(String str){
         //if(str.length()==0 ||str==null ) == error
