@@ -1,0 +1,16 @@
+public class Sample{
+    static int count_Zeroes (int n){
+        return No_of_Zeroes_Helper(n,0);
+    }
+    static int No_of_Zeroes_Helper(int n, int count){
+        if(n==0)
+            return count;
+        if(n%10 ==0){
+            return No_of_Zeroes_Helper(n/10 , count+1);
+        }
+        return No_of_Zeroes_Helper(n/10 , count);
+    }
+    public static void main(String[] args){
+        System.out.println(count_Zeroes(101));
+  }
+}
