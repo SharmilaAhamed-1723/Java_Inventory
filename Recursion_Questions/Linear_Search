@@ -6,7 +6,7 @@ public class Main {
         int[] arr = { 1,4,3,8,17,23};
         int target = 17;
         System.out.println(find(arr,target,0));
-
+        System.out.println(findIndex(arr,target,0));
     }
 
     static boolean find(int[] arr, int target, int index) {
@@ -14,5 +14,12 @@ public class Main {
             return false;
 
         return arr[index] == target || find(arr, target,index+1);
+    }
+    static int findIndex(int[] arr, int target, int index){
+        if(index== arr.length)
+            return -1;
+        if(arr[index]== target)
+            return index;
+        return findIndex(arr, target, index+1);
     }
 }
