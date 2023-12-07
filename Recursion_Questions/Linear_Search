@@ -17,17 +17,23 @@ public class Main {
         return arr[index] == target || find(arr, target,index+1);
     }
     static int findIndex(int[] arr, int target, int index){
-        if(index== arr.length)
+        if(index== arr.length){
             return -1;
-        if(arr[index]== target)
+        }
+        if(arr[index]== target){
             return index;
-        return findIndex(arr, target, index+1);
+         }else{
+             return findIndex(arr, target, index+1);
+         }
     }
     static int findIndexFromLast(int[] arr, int target, int index){
-        if(index== -1)
+        if(index== -1){
             return -1;
-        if(arr[index]== target)
+        }
+        if(arr[index]== target){
             return index;
-        return findIndexFromLast(arr, target, index-1);
+        }else{
+            return findIndexFromLast(arr, target, index-1);
+        }
     }
 }
