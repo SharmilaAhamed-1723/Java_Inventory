@@ -3,11 +3,13 @@
  */
 public class Main {
     public static void main(String[] args) {
-        int[] arr = { 1,4,3,8,17,23};
+        int[] arr = { 1,4,17,3,8,17,23,17,17};
         int target = 17;
         System.out.println(find(arr,target,0));
         System.out.println(findIndex(arr,target,0));
         System.out.println(findIndexFromLast(arr,target,0));
+        findAllIndex(arr,17, 0);
+        System.out.println(list);
     }
 
     static boolean find(int[] arr, int target, int index) {
@@ -35,5 +37,14 @@ public class Main {
         }else{
             return findIndexFromLast(arr, target, index-1);
         }
+    }
+    static ArrayList<Integer> list=new ArrayList<>();
+    static void findAllIndex(int[] arr, int target, int index){
+        if(index==arr.length)
+            return;
+        if(arr[index]== target) {
+            list.add(index);
+        }
+        findAllIndex(arr, target, index+1);
     }
 }
