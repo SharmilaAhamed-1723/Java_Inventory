@@ -13,7 +13,7 @@ public class Main {
     }
 
     /*
- Finding whether the number exists or not using linear search (Recursion) with ArrayList in the function call
+ Finding whether the number exists or not using linear search (Recursion - returning ArrayList ) 
  */
    static ArrayList<Integer> list=new ArrayList<>();
     static void findAllIndex(int[] arr, int target, int index){
