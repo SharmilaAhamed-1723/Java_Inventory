@@ -8,10 +8,6 @@ public class Main {
         System.out.println(find(arr,target,0));
         System.out.println(findIndex(arr,target,0));
         System.out.println(findIndexFromLast(arr,target,0));
-        findAllIndex(arr,17, 0);
-        System.out.println(list);
-        ArrayList<Integer> ans=findAllIndex1(arr,17, 0,new ArrayList<>());
-        System.out.println(ans);
     }
 
     static boolean find(int[] arr, int target, int index) {
@@ -39,16 +35,5 @@ public class Main {
         }else{
             return findIndexFromLast(arr, target, index-1);
         }
-    }
-    // Returning an ArrayList
-    static ArrayList<Integer> list=new ArrayList<>();
-    static void findAllIndex(int[] arr, int target, int index){
-        if(index==arr.length)
-            return;
-        if(arr[index]== target) {
-            list.add(index);
-        }
-        findAllIndex(arr, target, index+1);
-    }
-     
+    }    
 }
