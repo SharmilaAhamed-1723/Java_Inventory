@@ -1,0 +1,17 @@
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+       int arr[] = new int[]{90, 23, 5, 109, 12, 22, 67, 34};
+       Arrays.sort(arr);
+       int len = arr.length;
+       System.out.println(Arrays.toString(arr));
+       int j=0;
+       while(j<len - 1){
+           System.out.println(arr[j]+"-->"+arr[j+1]);
+           j++;
+       }
+       if(j==len-1){
+           System.out.println(arr[j]+"-->"+arr[j]);
+       }
+    }
+}
