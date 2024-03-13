@@ -1,0 +1,33 @@
+/*
+Input any five numbers from the user 
+and divide each number by {2,3,5}. And print 0 if the number is not divided by and 1 if it is divided in the following pattern
+        n1  n2   n3   
+  a1    0    1    1
+  a2    .    .    .
+  a3    .    .    .
+  a4    .    .    .
+  a5    .    .    .
+*/
+public class Main {
+       public static void main(String[] args) {
+           int[] a={2,12,15,21,24};
+           int[] b={2,3,5};
+           int[][] mat=new int[a.length][b.length];
+           for(int i=0;i<=a.length-1;i++){
+               for(int j=0;j<=b.length-1;j++){
+                   if(a[i]%b[j] == 0){
+                       mat[i][j] = 1;
+                   }
+                   else{
+                       mat[i][j] = 0;
+                   }
+               }
+           }
+           for(int i=0;i<=a.length-1;i++){
+               for(int j=0;j<=b.length-1;j++){
+                   System.out.print(mat[i][j]+" ");
+               }
+               System.out.println();
+           }
+        }
+    }
