@@ -1,14 +1,1 @@
-public class Main{
-    static int oddball_sum(int[] arr) {
-        int sum = 0;
-        for (int i = 1; i <= arr.length - 1; i+=2) {
-            sum += arr[i];
-        }
-        return sum;
-    }
-    public static void main(String[] args) {
-        int[] arr={1,7,2,3,2,0};
-        int ans=oddball_sum(arr);
-        System.out.println(ans);
-        }
-    }
+
