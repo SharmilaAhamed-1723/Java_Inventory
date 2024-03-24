@@ -1,0 +1,21 @@
+public class Main {
+    public static void skipChar(String processed, String unprocessed){
+        if(unprocessed.isEmpty()) {
+            //System.out.print(processed);
+            return;
+        }
+        char ch=unprocessed.charAt(0);
+        if(ch=='a') {
+            skipChar(processed, unprocessed.substring(1));
+        }
+        else {
+            skipChar(ch + processed, unprocessed.substring(1));
+        }
+    }
+    public static void main(String[] args) {
+         String unprocessed="abd";
+         String processed="";
+         skipChar(processed,unprocessed);
+         System.out.print(processed);
+         }
+}
