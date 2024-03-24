@@ -1,7 +1,7 @@
 public class Main {
     public static void skipChar(String processed, String unprocessed){
         if(unprocessed.isEmpty()) {
-            //System.out.print(processed);
+            System.out.print(processed);
             return;
         }
         char ch=unprocessed.charAt(0);
@@ -12,10 +12,27 @@ public class Main {
             skipChar(ch + processed, unprocessed.substring(1));
         }
     }
-    public static void main(String[] args) {
+
+    public class Main {
+    public static String skipChar1(String unprocessed){
+        if(unprocessed.isEmpty()) {
+            return "";
+        }
+        char ch=unprocessed.charAt(0);
+        if(ch=='a') {
+            return skipChar1(unprocessed.substring(1));
+        }
+        else {
+            return ch+skipChar1(unprocessed.substring(1));
+        }
+    }
+    
+  public static void main(String[] args) {
          String unprocessed="abd";
          String processed="";
          skipChar(processed,unprocessed);
-         System.out.print(processed);
-         }
+         
+         String ans=skipChar1(unprocessed);
+         System.out.print(ans);
+ }
 }
