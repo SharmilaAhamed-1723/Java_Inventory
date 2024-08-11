@@ -1,0 +1,29 @@
+/*
+if number of charachetrs in string is even , skip.
+if it is odd, print,(say PROGRAM) like
+   G
+   OGR
+   ROGRA
+   PROGRAM
+*/
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String any=sc.next();
+        char[] some = any.toCharArray();
+        int num_of_chars = some.length;
+        if (num_of_chars % 2 == 0) {
+            System.out.println("CHOOSE STRING HAVING ODD NUMBER OF CHARACTERS!!!");
+        } else {
+            int n = some.length / 2;
+                for (int i = 0; i <= some.length - 4; i++) {
+                    for (int j = n - i; j <= n + i; j++) {
+                        System.out.print(some[j]);
+                    }
+                    System.out.println();
+                }
+        }
+    }
+}
