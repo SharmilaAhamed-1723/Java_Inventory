@@ -18,7 +18,7 @@ public class Main {
             System.out.println("CHOOSE STRING HAVING ODD NUMBER OF CHARACTERS!!!");
         } else {
             int n = some.length / 2;
-                for (int i = 0; i <= some.length - 4; i++) {
+                for (int i = 0; i <= n; i++) {
                     for (int j = n - i; j <= n + i; j++) {
                         System.out.print(some[j]);
                     }
