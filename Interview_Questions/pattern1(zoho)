@@ -1,0 +1,41 @@
+/*
+       G
+      GR
+     GRA
+    GRAM
+   GRAMP
+  GRAMPR
+ GRAMPRO
+ */
+
+ import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String any=sc.next();
+        //String any="PROGRAM";
+        char[] some = any.toCharArray();
+        int num_of_chars = some.length;
+        if (num_of_chars % 2 == 0) {
+            System.out.println("CHOOSE STRING HAVING ODD NUMBER OF CHARACTERS!!!");
+        } else {
+            int n = some.length / 2;
+            for (int i = 0; i <=num_of_chars-1; i++) {
+                for(int k=num_of_chars-i;k>=1;k--) {
+                    System.out.print(" ");
+                }
+                int j = n ;
+                while (j <= n+i) {
+                    if(j > num_of_chars-1) {
+                        System.out.print(some[j % num_of_chars]);
+                    }
+                    else {
+                        System.out.print(some[j]);
+                    }
+                    j++;
+                }
+                System.out.println();
+            }
+        }
+    }
+}
