@@ -1,0 +1,26 @@
+/*
+Number of characters after the last space.
+Input: Java is an object-oriented language
+Output: 8 (no. of characters in language)
+*/
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter a sentence:");
+        String str = sc.nextLine();
+        char ch[] = str.toCharArray();
+        int i=0,count=0;
+        int n=str.length();
+        while(i<n){
+            if(Character.isLetter(ch[i])){
+                 count+=1;
+            }
+            else {
+                count = 0;
+            }
+            i++;
+        }
+        System.out.println(count);
+    }
+}
